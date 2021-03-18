@@ -79,7 +79,7 @@ void StaticLayer::onInitialize()
   nh.param("unknown_cost_value", temp_unknown_cost_value, int(-1));
   nh.param("trinary_costmap", trinary_costmap_, true);
 
-  lethal_threshold_ = std::max(std::min(temp_lethal_threshold, 100), 0);
+  lethal_threshold_ = std::max(std::min(temp_lethal_threshold, 60), 0);//default: 100
   unknown_cost_value_ = temp_unknown_cost_value;
 
   // Only resubscribe if topic has changed
